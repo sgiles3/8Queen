@@ -68,7 +68,25 @@ public class Board {
 			}
 		}
 		// Check diagonal
+		int i = x;
+		int j = y;
+		while (i != 0 && j != 0) {
+			i--;
+			j--;
+			if (b[i][j] == 8) {
+				return false;
+			}
+		}
 
+		i = x;
+		j = y;
+		while (i != 7 && j != 7) {
+			i++;
+			j++;
+			if (b[i][j] == 8) {
+				return false;
+			}
+		}
 		return true;
 	}
 
